@@ -1,0 +1,181 @@
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant."
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.\n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\\n\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished(content='xxx') # Use escape characters \\', \\\", and \\n in content part to ensure we can parse the content in normal python string format.\n\n## Note\n- Use English in `Thought` part.\n- Write a small plan and finally summarize your next action (with its target element) in one sentence in `Thought` part.\n- My computer's password is 'password', feel free to use it when you need sudo rights.\n\n## User Instruction\nCan you enable the 'Do Not Track' feature in Chrome to enhance my online privacy?\n"
+      },
+      {
+        "type": "image_url",
+        "image_url": "image_0000.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: To enable the Do Not Track feature, I first need to access the settings menu in Chrome. In the upper right corner of the browser interface, there's an icon made up of three small dots; clicking on it will open all the available options.\nAction: click(start_box='<|box_start|>(1908,89)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0001.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The menu has been expanded, and I've noticed that the Settings option is located near the bottom. By clicking on it, I can access the Chrome settings page where I'll be able to find the relevant options for privacy settings.\nAction: click(start_box='<|box_start|>(1649,862)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0002.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I see that the settings interface is now open. To enable the Do Not Track feature, I need to go into the privacy-related settings first. There's an option labeled \"Privacy and security\" in the left sidebar, which is exactly what I'm looking for. Clicking on it should lead me to more detailed privacy configuration options.\nAction: click(start_box='<|box_start|>(177,280)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0003.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I took a quick glance at the various options on the privacy and security settings page and spotted \"Site settings,\" which is exactly what I was looking for. This section allows me to manage how websites can interact with my device, including permissions related to location information and pop-ups. To proceed with setting up Do Not Track, I need to click on this option first.\nAction: click(start_box='<|box_start|>(765,965)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0004.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: It seems I've taken a wrong turn. The site settings page isn't the place to adjust the Do Not Track feature; that option should actually be located under the \"Privacy and security\" section. Let me click on \"Privacy and security\" in the left navigation bar again, as that’s where I’ll find more comprehensive privacy-related settings.\nAction: click(start_box='<|box_start|>(177,280)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0005.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I just spent quite some time searching through the site settings, but I realized that wasn’t the right approach. After taking another look at the current page, I noticed there’s an option called \"Third-party cookies.\" This is actually a crucial entry point for managing privacy features. It appears that third-party cookies are closely linked to user tracking behavior, so clicking on this option should help me locate where to enable Do Not Track.\nAction: click(start_box='<|box_start|>(765,765)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0006.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: Ah, I finally found the key switch! At the bottom of the page, there's an option labeled \"Send a 'Do Not Track' request with your browsing traffic.\" This toggle is exactly what we were looking for. By simply clicking this switch to turn it on, Chrome will start sending out Do Not Track requests while we browse the web. Let me quickly finish this final step.\nAction: click(start_box='<|box_start|>(1302,885)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0007.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: A confirmation dialog popped up, informing me that enabling Do Not Track would send a request to websites during my browsing session. While the effectiveness might vary from site to site, I still wanted to give it a try. So, I clicked the blue \"Confirm\" button in the lower right corner of the dialog box to activate this privacy protection feature.\nAction: click(start_box='<|box_start|>(1201,709)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0008.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: That's great! I just checked the status of the toggle, and it shows that the \"Do Not Track\" feature has been successfully activated. From now on, whenever we browse the web, Chrome will send out a request indicating that we do not want to be tracked. This means our online privacy will receive better protection.\nAction: finished(content='已为你开启“请勿跟踪”功能以增强在线隐私。')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0009.png"
+      }
+    ]
+  }
+]

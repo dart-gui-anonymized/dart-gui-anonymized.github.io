@@ -1,0 +1,127 @@
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant."
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.\n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\\n\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished(content='xxx') # Use escape characters \\', \\\", and \\n in content part to ensure we can parse the content in normal python string format.\n\n## Note\n- Use English in `Thought` part.\n- Write a small plan and finally summarize your next action (with its target element) in one sentence in `Thought` part.\n- My computer's password is 'password', feel free to use it when you need sudo rights.\n\n## User Instruction\nCan you remove vim from favorite app in 'favorites'?\n"
+      },
+      {
+        "type": "image_url",
+        "image_url": "image_0000.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I noticed that there’s an icon for Vim on the left side of my desktop, and I need to remove it from my favorites. To do this, I first have to access the system menu. There's a white grid button in the lower-left corner of the screen; clicking on it will open up more options.\nAction: click(start_box='<|box_start|>(27,1054)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0001.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The interface has now switched to the activity overview mode, and I see a search box at the top. To find Vim quickly, I need to click on this search box so that I can enter keywords for my search.\nAction: click(start_box='<|box_start|>(1000,70)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0002.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The search box is ready, and I'm going to type \"vim\" into it. This way, the system can help me locate all applications related to Vim, making it easier for me to proceed with the process of removing it from my favorites list.\nAction: type(content='vim')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0003.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The search results displayed the Vim icon I was looking for. Now, I need to bring up the context menu in order to remove it from my favorites. Let me right-click on this icon so that I can see more options.\nAction: right_single(start_box='<|box_start|>(1000,186)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0004.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: Great! The right-click menu has appeared, and I can see the option \"Remove from Favorites.\" By clicking on it, I can easily take Vim out of my favorites list. Let me go ahead and complete this final step.\nAction: click(start_box='<|box_start|>(1176,216)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0005.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: That's fantastic! I just successfully removed Vim from my favorites list by right-clicking and selecting the option to delete it. Now, this application won't appear in my frequently used apps anymore.\nAction: finished(content='已将vim从 favorite app 中移除。')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0006.png"
+      }
+    ]
+  }
+]

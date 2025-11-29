@@ -1,0 +1,142 @@
+[
+  {
+    "id": "c1fa57f3-c3db-4596-8f09-020701085416_trace-2863a610c37e-1758785787",
+    "name": "c1fa57f3-c3db-4596-8f09-020701085416_trace-2863a610c37e-1758785787",
+    "task_id": "c1fa57f3-c3db-4596-8f09-020701085416",
+    "instruction": "Open the baggage fee calculator in United Airlines website.",
+    "reward": "1.0",
+    "steps": 9,
+    "app_domain": "chrome",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "030eeff7-b492-4218-b312-701ec99ee0cc_trace-3155a670689f-1758785787",
+    "name": "030eeff7-b492-4218-b312-701ec99ee0cc_trace-3155a670689f-1758785787",
+    "task_id": "030eeff7-b492-4218-b312-701ec99ee0cc",
+    "instruction": "Can you enable the 'Do Not Track' feature in Chrome to enhance my online privacy?",
+    "reward": "1.0",
+    "steps": 10,
+    "app_domain": "chrome",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "77b8ab4d-994f-43ac-8930-8ca087d7c4b4_trace-6fe5f975cbf4-1758785787",
+    "name": "77b8ab4d-994f-43ac-8930-8ca087d7c4b4_trace-6fe5f975cbf4-1758785787",
+    "task_id": "77b8ab4d-994f-43ac-8930-8ca087d7c4b4",
+    "instruction": "Could you assist me in placing my photo on the desktop and renaming it to export.jpg?",
+    "reward": "1.0",
+    "steps": 13,
+    "app_domain": "gimp",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "7767eef2-56a3-4cea-8c9f-48c070c7d65b_trace-b0c90bf8e9f6-1758785787",
+    "name": "7767eef2-56a3-4cea-8c9f-48c070c7d65b_trace-b0c90bf8e9f6-1758785787",
+    "task_id": "7767eef2-56a3-4cea-8c9f-48c070c7d65b",
+    "instruction": "Please help change GIMP's theme from dark to light.",
+    "reward": "1.0",
+    "steps": 14,
+    "app_domain": "gimp",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "6a33f9b9-0a56-4844-9c3f-96ec3ffb3ba2_trace-10ca4f8e34c3-1758785787",
+    "name": "6a33f9b9-0a56-4844-9c3f-96ec3ffb3ba2_trace-10ca4f8e34c3-1758785787",
+    "task_id": "6a33f9b9-0a56-4844-9c3f-96ec3ffb3ba2",
+    "instruction": "I have been editing my document and some words that needed to be rewritten are highlighted in yellow. As I fixed those words, please help me remove all highlight. I want to make sure that there is no highlight word.",
+    "reward": "1.0",
+    "steps": 11,
+    "app_domain": "libreoffice",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "aa3a8974-2e85-438b-b29e-a64df44deb4b_trace-15587c60be31-1758785787",
+    "name": "aa3a8974-2e85-438b-b29e-a64df44deb4b_trace-15587c60be31-1758785787",
+    "task_id": "aa3a8974-2e85-438b-b29e-a64df44deb4b",
+    "instruction": "I'm working on a project and need to resize cells in a spreadsheet to fit onto one page and export to PDF for efficient presentation. Could you help me on this? Keep the name of PDF the same as the spreadsheet and place it under my home directory.",
+    "reward": "1.0",
+    "steps": 13,
+    "app_domain": "libreoffice",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "57242fad-77ca-454f-b71b-f187181a9f23_trace-f68c469797e9-1758785787",
+    "name": "57242fad-77ca-454f-b71b-f187181a9f23_trace-f68c469797e9-1758785787",
+    "task_id": "57242fad-77ca-454f-b71b-f187181a9f23",
+    "instruction": "Please help me create a new python file named \"test.py\" via VS Code and save it at \"/home/user/Desktop\".",
+    "reward": "1.0",
+    "steps": 8,
+    "app_domain": "vscode",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "9d425400-e9b2-4424-9a4b-d4c7abac4140_trace-8000268804f9-1758785787",
+    "name": "9d425400-e9b2-4424-9a4b-d4c7abac4140_trace-8000268804f9-1758785787",
+    "task_id": "9d425400-e9b2-4424-9a4b-d4c7abac4140",
+    "instruction": "I want to make the tabs wrapped over multiple lines when exceeding available space, please help modify the setting of VS Code.",
+    "reward": "1.0",
+    "steps": 8,
+    "app_domain": "vscode",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "2c9fc0de-3ee7-45e1-a5df-c86206ad78b5_trace-4b4f1a6849a4-1758785787",
+    "name": "2c9fc0de-3ee7-45e1-a5df-c86206ad78b5_trace-4b4f1a6849a4-1758785787",
+    "task_id": "2c9fc0de-3ee7-45e1-a5df-c86206ad78b5",
+    "instruction": "Could you help me push the changes from commandline in current project to origin main, with the commit message \"daily update\"?",
+    "reward": "1.0",
+    "steps": 10,
+    "app_domain": "terminal",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "2c9fc0de-3ee7-45e1-a5df-c86206ad78b5_trace-4b4f1a6849a4-1758785787",
+    "name": "2c9fc0de-3ee7-45e1-a5df-c86206ad78b5_trace-4b4f1a6849a4-1758785787",
+    "task_id": "2c9fc0de-3ee7-45e1-a5df-c86206ad78b5",
+    "instruction": "Could you help me push the changes from commandline in current project to origin main, with the commit message \"daily update\"?",
+    "reward": "1.0",
+    "steps": 10,
+    "app_domain": "terminal",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "e0df059f-28a6-4169-924f-b9623e7184cc_trace-e5da3d3e9537-1758785787",
+    "name": "e0df059f-28a6-4169-924f-b9623e7184cc_trace-e5da3d3e9537-1758785787",
+    "task_id": "e0df059f-28a6-4169-924f-b9623e7184cc",
+    "instruction": "I have a directory named \"todo_list_Jan_1\". Can you help me change its name into \"todo_list_Jan_2\"?",
+    "reward": "1.0",
+    "steps": 6,
+    "app_domain": "file_manager",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "8ba5ae7a-5ae5-4eab-9fcc-5dd4fe3abf89_trace-90a15b02a0c2-1758785787",
+    "name": "8ba5ae7a-5ae5-4eab-9fcc-5dd4fe3abf89_trace-90a15b02a0c2-1758785787",
+    "task_id": "8ba5ae7a-5ae5-4eab-9fcc-5dd4fe3abf89",
+    "instruction": "Help me modify the folder used to store my recordings to Desktop",
+    "reward": "1.0",
+    "steps": 8,
+    "app_domain": "file_manager",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "e528b65e-1107-4b8c-8988-490e4fece599_trace-d3841c47e39a-1758785787",
+    "name": "e528b65e-1107-4b8c-8988-490e4fece599_trace-d3841c47e39a-1758785787",
+    "task_id": "e528b65e-1107-4b8c-8988-490e4fece599",
+    "instruction": "Please help me make the first letter of each word to uppercase.",
+    "reward": "1.0",
+    "steps": 7,
+    "app_domain": "other",
+    "os": "Ubuntu 22.04"
+  },
+  {
+    "id": "ec4e3f68-9ea4-4c18-a5c9-69f89d1178b3_trace-c7b6102fb2d5-1758785787",
+    "name": "ec4e3f68-9ea4-4c18-a5c9-69f89d1178b3_trace-c7b6102fb2d5-1758785787",
+    "task_id": "ec4e3f68-9ea4-4c18-a5c9-69f89d1178b3",
+    "instruction": "Can you remove vim from favorite app in 'favorites'?",
+    "reward": "1.0",
+    "steps": 7,
+    "app_domain": "other",
+    "os": "Ubuntu 22.04"
+  }
+]

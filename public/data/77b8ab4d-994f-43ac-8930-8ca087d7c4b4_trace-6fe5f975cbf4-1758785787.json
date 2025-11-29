@@ -1,0 +1,235 @@
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant."
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.\n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\\n\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished(content='xxx') # Use escape characters \\', \\\", and \\n in content part to ensure we can parse the content in normal python string format.\n\n## Note\n- Use English in `Thought` part.\n- Write a small plan and finally summarize your next action (with its target element) in one sentence in `Thought` part.\n- My computer's password is 'password', feel free to use it when you need sudo rights.\n\n## User Instruction\nCould you assist me in placing my photo on the desktop and renaming it to export.jpg?\n"
+      },
+      {
+        "type": "image_url",
+        "image_url": "image_0000.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I noticed that GIMP is already open, and now I need to import an image. Let me click on the File menu in the top left corner so that I can find the option to open a file. This way, we'll be able to select an appropriate photo from our local storage.\nAction: click(start_box='<|box_start|>(86,76)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0001.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The File menu has been expanded, and I can see the \"Open...\" option right in front of me. By clicking on it, I'll be able to bring up the file selection dialog box, allowing me to choose a suitable photo from my local files.\nAction: click(start_box='<|box_start|>(117,155)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0002.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: In the file selection dialog, I found the image titled \"The_Lost_River_Of_Dreams.jpg.\" Now, all I need to do is double-click on this file to import it into GIMP for editing. Let’s get started!\nAction: left_double(start_box='<|box_start|>(374,174)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0003.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: Great! The image has been successfully imported into GIMP. Now, I need to save it as a new file on my desktop. Let me click on the File menu in the top left corner and look for the Export As option—this will allow me to rename it to export.jpg.\nAction: click(start_box='<|box_start|>(86,76)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0004.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I found the \"Export As...\" option in the File menu, which is exactly what I was looking for. By clicking on it, I can open the save dialog box and rename this beautiful image to export.jpg before saving it to my desktop. Let me go ahead and click on this option to start the exporting process.\nAction: click(start_box='<|box_start|>(137,408)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0005.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The export dialog box is now open, and I see that the filename field displays \"The_Lost_River_Of_Dreams.jpg.\" To rename it to export.jpg, I first need to clear out the current filename. So, let me click on this input box and delete the existing name.\nAction: click(start_box='<|box_start|>(629,126)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0006.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The filename input box is currently selected, and I need to clear the original name before entering a new one. First, I'll press Ctrl+A to select all the text in the current filename, which will allow me to directly type in \"export.jpg\" without having to delete each character individually.\nAction: hotkey(key='ctrl a')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0007.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The old filename has been fully selected, and now I'm going to enter \"export.jpg\" as the new name. Once I finish typing this simple yet important filename, our image will have a new identity.\nAction: type(content='export.jpg')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0008.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: Everything is ready to go! I've entered the new filename \"export.jpg,\" and now all that's left is to click on the prominent \"Export\" button in the bottom right corner of the dialog box. Once I do that, this image will be saved under its new name on my desktop.\nAction: click(start_box='<|box_start|>(1022,758)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0009.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: It seems that everything is ready to go. The quality settings are all fine, and the other parameters look good as well. Now, all I need to do is click on the \"Export\" button in the lower right corner of this dialog box, and this image will be saved under its new name on my desktop.\nAction: click(start_box='<|box_start|>(678,643)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0010.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: That's great! The export operation has been successfully completed. Now, let me minimize the GIMP window so I can go to my desktop and check if the newly created export.jpg file is sitting there nicely. After all, seeing it with my own eyes will give me peace of mind.\nAction: click(start_box='<|box_start|>(1846,45)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0011.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I glanced over at my desktop and saw that the file named export.jpg was safely resting there. This indicates that the entire process went smoothly—from importing the original image, setting up the export parameters, to successfully saving it on my desktop. Now that this task is perfectly wrapped up, I can confidently move on to handling other matters.\nAction: finished(content='我的照片已经成功导出到桌面，并重命名为export.jpg。')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0012.png"
+      }
+    ]
+  }
+]

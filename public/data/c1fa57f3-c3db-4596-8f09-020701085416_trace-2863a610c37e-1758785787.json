@@ -1,0 +1,163 @@
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant."
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.\n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\\n\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished(content='xxx') # Use escape characters \\', \\\", and \\n in content part to ensure we can parse the content in normal python string format.\n\n## Note\n- Use English in `Thought` part.\n- Write a small plan and finally summarize your next action (with its target element) in one sentence in `Thought` part.\n- My computer's password is 'password', feel free to use it when you need sudo rights.\n\n## User Instruction\nOpen the baggage fee calculator in United Airlines website.\n"
+      },
+      {
+        "type": "image_url",
+        "image_url": "image_0000.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I noticed that there’s an option called \"Travel info\" in the top navigation bar, which should be where I can find information related to baggage fees. Let me click on this button first to see if I can locate the specific details about the baggage fee calculator.\nAction: click(start_box='<|box_start|>(654,151)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0001.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: Ah, I found it! There's an option labeled \"Baggage info\" in the menu list, which is exactly what I was looking for regarding baggage-related information. By clicking on this link, I should be able to access the detailed rules and fee standards for checked baggage.\nAction: click(start_box='<|box_start|>(730,273)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0002.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: It seems that the page is still loading, as I can see \"Loading...\" displayed in the center of the screen. I'll just have to wait a moment for it to finish loading so that I can view all the baggage fee information.\nAction: wait()"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0003.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I've navigated to the baggage information page, but it appears that this isn't the specific calculator tool I'm looking for. The content currently displayed mainly focuses on general baggage policies and size requirements. Let me scroll down a bit more; perhaps the actual baggage fee calculation tool is located further down on the page.\nAction: scroll(direction='down', start_box='<|box_start|>(966,546)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0004.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I scrolled through the entire page and couldn't find a direct link to the baggage fee calculator. However, I did notice a section titled \"Manage my bags,\" which seems quite promising. Typically, airlines place their baggage fee calculation tools in this area. So, let me click on that option and see if I can find the specific calculator feature we're looking for.\nAction: click(start_box='<|box_start|>(511,238)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0005.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I just clicked on the \"Manage my bags\" option, but it seems like that's not the right path. After taking a closer look at the page layout, I noticed there’s an option labeled \"Prepay for bags.\" This title perfectly aligns with our goal of calculating baggage fees. Let me shift my approach and click on this option to see if I can find the specific calculator tool we need.\nAction: click(start_box='<|box_start|>(1537,234)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0006.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: Ah, I finally found it! In the related links section on the right side of the page, there's a link labeled \"Baggage Fee Calculator.\" Isn't that exactly what we were looking for? Clicking on this link will take us directly to the tool for calculating baggage fees.\nAction: click(start_box='<|box_start|>(1402,592)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0007.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: That's great! I finally found the baggage fee calculator page. It has a clear interface where users can enter flight information such as departure city, destination, travel dates, cabin class, and membership status to calculate the relevant fees. This is exactly what we were looking for.\nAction: finished(content='联合航空公司的行李费用计算器在United.com网站的 “管理我的行李” 页面中。')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0008.png"
+      }
+    ]
+  }
+]

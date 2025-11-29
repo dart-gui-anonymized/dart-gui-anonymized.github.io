@@ -1,0 +1,145 @@
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant."
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.\n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\\n\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished(content='xxx') # Use escape characters \\', \\\", and \\n in content part to ensure we can parse the content in normal python string format.\n\n## Note\n- Use English in `Thought` part.\n- Write a small plan and finally summarize your next action (with its target element) in one sentence in `Thought` part.\n- My computer's password is 'password', feel free to use it when you need sudo rights.\n\n## User Instruction\nI want to make the tabs wrapped over multiple lines when exceeding available space, please help modify the setting of VS Code.\n"
+      },
+      {
+        "type": "image_url",
+        "image_url": "image_0000.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I noticed that there’s a search box at the top of the settings interface, which is exactly what I need. To find the option for configuring tab wrapping, I first have to click on this search box so that it becomes active and ready for input.\nAction: click(start_box='<|box_start|>(627,151)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0001.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The search box is now activated, and I'm going to type \"wrap\" as my keyword. This should help me quickly locate the settings related to tab wrapping. After all, searching through such a large number of options one by one would be too time-consuming.\nAction: type(content='wrap')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0002.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: It seems that the search term \"wrap\" isn't quite right; I've only found some security-related settings. Let me clear out the current content in the search box and start over. First, I'll press Ctrl+A to select everything, then hit delete to remove it all. After that, I’ll re-enter more precise keywords like \"wrap.\" That should help us pinpoint the actual tab wrapping settings we're looking for.\nAction: hotkey(key='ctrl a')\n\nhotkey(key='ctrl a')\n\nhotkey(key='backspace')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0003.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The search box has been cleared, and now I’m going to type in the keyword \"wrap.\" This term is much more specific than what I used before, so it should help us directly locate the settings related to tab wrapping. After all, finding the correct setting among so many options requires a bit of precision.\nAction: type(content='wrap')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0004.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: Ah, I've found it! There's an option called \"Workbench > Editor: Wrap Tabs,\" which is exactly what controls whether tabs wrap onto multiple lines. Currently, it's set to off, so I need to click on this checkbox to enable the automatic wrapping feature.\nAction: click(start_box='<|box_start|>(794,702)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0005.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: Great! I just successfully enabled the tab wrapping feature. However, to make sure these changes take effect permanently, I need to save them using the Ctrl+S shortcut. After all, no one wants their settings to disappear every time they close VS Code.\nAction: hotkey(key='ctrl s')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0006.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I checked the settings interface, and I'm pleased to see that the \"Workbench > Editor: Wrap Tabs\" option has been successfully enabled. This means that from now on, whenever a line of code exceeds the width of the editing area, VSCode will automatically wrap it onto multiple lines. The configuration changes have taken effect immediately.\nAction: finished(content='已将标签页在超过可用空间时换行。')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0007.png"
+      }
+    ]
+  }
+]

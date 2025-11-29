@@ -1,0 +1,109 @@
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant."
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.\n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\\n\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished(content='xxx') # Use escape characters \\', \\\", and \\n in content part to ensure we can parse the content in normal python string format.\n\n## Note\n- Use English in `Thought` part.\n- Write a small plan and finally summarize your next action (with its target element) in one sentence in `Thought` part.\n- My computer's password is 'password', feel free to use it when you need sudo rights.\n\n## User Instruction\nI have a directory named \"todo_list_Jan_1\". Can you help me change its name into \"todo_list_Jan_2\"?\n"
+      },
+      {
+        "type": "image_url",
+        "image_url": "image_0000.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I noticed that there’s a folder on the desktop named \"todo_list_Jan_1,\" which needs to be renamed. The first step is quite simple; I just need to right-click on this folder to open the menu options. Let me go ahead and do that now.\nAction: right_single(start_box='<|box_start|>(1862,938)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0001.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: Great! The right-click menu has popped up. I see the \"Rename...\" option, and by clicking on it, I can start editing the name of this folder. This is exactly what we need to do next.\nAction: click(start_box='<|box_start|>(1704,701)<|box_end|>')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0002.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The rename dialog box is now open, and I can see that the original folder name \"todo_list_Jan_1\" is already selected. All I need to do next is type in the new name \"todo_list_Jan_2.\" Once I finish typing and press Enter, this renaming process will be complete.\nAction: type(content='todo_list_Jan_2')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0003.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The new name has been entered successfully, and I can see that the input box displays \"todo_list_Jan_2.\" Now, all I need to do is gently press the Enter key, and this folder will have its name changed. Let me go ahead and complete this final confirmation step.\nAction: hotkey(key='enter')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0004.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: That's great! I can see that the folder name has been successfully changed to \"todo_list_Jan_2.\" This renaming task has been completed perfectly, and now this folder will be easier to identify in the file list.\nAction: finished(content='文件夹已经成功重命名为\\\"todo_list_Jan_2\\\"了。')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0005.png"
+      }
+    ]
+  }
+]

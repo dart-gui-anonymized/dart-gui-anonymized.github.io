@@ -1,0 +1,181 @@
+[
+  {
+    "role": "system",
+    "content": "You are a helpful assistant."
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "text",
+        "text": "You are a GUI agent. You are given a task and your action history, with screenshots. You need to perform the next action to complete the task.\n\n## Output Format\n```\nThought: ...\nAction: ...\n```\n\n## Action Space\n\nclick(start_box='<|box_start|>(x1,y1)<|box_end|>')\nleft_double(start_box='<|box_start|>(x1,y1)<|box_end|>')\nright_single(start_box='<|box_start|>(x1,y1)<|box_end|>')\ndrag(start_box='<|box_start|>(x1,y1)<|box_end|>', end_box='<|box_start|>(x3,y3)<|box_end|>')\nhotkey(key='')\ntype(content='') #If you want to submit your input, use \"\\n\" at the end of `content`.\nscroll(start_box='<|box_start|>(x1,y1)<|box_end|>', direction='down or up or right or left')\nwait() #Sleep for 5s and take a screenshot to check for any changes.\nfinished(content='xxx') # Use escape characters \\', \\\", and \\n in content part to ensure we can parse the content in normal python string format.\n\n## Note\n- Use English in `Thought` part.\n- Write a small plan and finally summarize your next action (with its target element) in one sentence in `Thought` part.\n- My computer's password is 'password', feel free to use it when you need sudo rights.\n\n## User Instruction\nCould you help me push the changes from commandline in current project to origin main, with the commit message \"daily update\"?\n"
+      },
+      {
+        "type": "image_url",
+        "image_url": "image_0000.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I noticed that the terminal is already open, but before pushing code to the remote repository, I need to make sure that all local changes have been committed. Let me first enter the command \"git status\" in this blank command line; this will allow me to see what modifications haven't been saved yet.\nAction: type(content='git status')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0001.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The command has been fully entered, and now I'm going to press the Enter key to execute it. This will help me understand the exact state of my local repository—whether there are any files that need to be committed or if everything is ready for a direct push.\nAction: hotkey(key='enter')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0002.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The output from git status shows that there are some untracked files in the repository, such as LICENSE and README.md. In order to push these changes to the remote repository, I first need to add them using git add. So let me go ahead and enter this command now.\nAction: type(content='git add .')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0003.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I've finished entering the command, and now I just need to gently press the Enter key. This will allow Git to track all the new files that haven't been added yet. Once this step is completed, we can move on to creating a commit record.\nAction: hotkey(key='enter')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0004.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: Alright, the files have been added successfully. Now, I need to create a record of these changes. Let me type \"git commit -m 'daily update'\" in the command line; this will allow me to document today's updates with that specific message.\nAction: type(content='git commit -m \\\"daily update\\\"')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0005.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: I've already entered the command to create a commit record, and now all I need to do is gently press the Enter key. This will prompt Git to open up an editor where I can write down the details of today's updates. Once that's done, our code changes will be properly documented.\nAction: hotkey(key='enter')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0006.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: It seems that the commit message has been successfully recorded. Now, I need to push these changes to the remote repository. Let me type \"git push -u origin main\" in the command line; this will同步我的更新到远程仓库的main分支。作为最后一步操作，这个命令可以帮我完成整个任务。\nAction: type(content='git push -u origin main')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0007.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: The command has been fully entered, and now I'm going to press the Enter key to execute it. This final step will同步所有的更改 to the remote repository. With this simple keystroke, today's updates will be permanently saved in the cloud.\nAction: hotkey(key='enter')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0008.png"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": [
+      {
+        "type": "text",
+        "text": "Thought: That's great! I see that the terminal shows \"Branch 'main' set up to track remote branch 'main' from 'origin',\" which indicates that the push operation was successful. Every step went smoothly—from adding files, writing commit messages, to finally syncing with the remote repository. Now, all these changes are safely stored in the cloud.\nAction: finished(content='Pushed changes from commandline in current project to origin main，with the commit message \\\"daily update\\\".')"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": [
+      {
+        "type": "image_url",
+        "image_url": "image_0009.png"
+      }
+    ]
+  }
+]
