@@ -371,7 +371,7 @@ git clone https://huggingface.co/dart-gui/dart-gui-7b
           <!-- Complete Trajectories Dataset Card -->
           <div class="resource-card">
             <div class="resource-icon">📊</div>
-            <h2>Complete Trajectories Dataset</h2>
+            <h2>All Trajectories</h2>
             <p class="resource-desc">Full dataset with all 360+ trajectories including screenshots, actions, and annotations.</p>
             <div class="resource-details">
               <div class="detail-item">
