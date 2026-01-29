@@ -43,7 +43,7 @@
               <div class="resource-meta">
                 <span>📦 ZIP Archive (~15 MB)</span>
               </div>
-              <a href="./iclr26-dart-gui.zip" download class="btn-download-compact">
+              <a href="./icml26-dart-gui.zip" download class="btn-download-compact">
                 <span>⬇️</span> Download Code
               </a>
             </div>
