@@ -330,7 +330,7 @@ git clone https://huggingface.co/dart-gui/dart-gui-7b
               </div>
             </div>
             <div class="resource-actions">
-              <a href="./iclr26-dart-gui.zip" download class="btn-download">
+              <a href="./icml26-dart-gui.zip" download class="btn-download">
                 <span class="btn-icon">⬇️</span>
                 Download Code
               </a>
